@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
+    <title>SLA</title>
+</head>
+<body>
+    <main class="sla">
+        <h1 class="title">Preenchimento da SLA</h1>
+        <form class="form--sla">
+            <div class="sla__container container">
+                <span>Qual posição ocupa atualmente?</span>
+                <textarea tabindex="1" name="cargo" rows="1"></textarea>
+            </div>
+            <div class="sla__container container">
+                <span>Qual o faturamento anual?</span>
+                <textarea tabindex="2" name="faturamento" rows="1"></textarea>
+            </div>
+            <div class="sla__container container">
+                <span>Como conheceu o G4?</span>
+                <textarea tabindex="3" name="conhecia" rows="1"></textarea>
+            </div>
+            <div class="sla__container container">
+                <span>Já foi aluno de algum programa?</span>
+                <br>
+                <input onclick="enableForm()" class="radio" value="Sim" name="alumni" type="radio">Sim
+                <input class="radio" checked value="Não" name="alumni" type="radio">Não
+                <textarea name="programa" disabled id="" rows="1"></textarea>
+            </div>
+            <div class="sla__container container">
+                <span>Qual o produto/serviço?</span>
+                <textarea tabindex="4" name="produto"></textarea>
+            </div>
+            <div class="sla__container container">
+                <span>Como vende o produto/serviço?</span>
+                <textarea tabindex="5" name="canal"></textarea>
+            </div>
+            <div class="sla__container container">
+                <span>Qual o perfil de cliente da empresa?</span>
+                <textarea tabindex="6" name="cliente"></textarea>
+            </div>
+            <div class="sla__container container">
+                <span>Qual o principal desafio da empresa?</span>
+                <textarea tabindex="7" name="desafio"></textarea>
+            </div>
+            <div class="sla__container container">
+                <span>Obs:</span>
+                <textarea tabindex="8" name="obs"></textarea>
+            </div>
+            <div class="sla__container container">
+                <span>O lead concordou em participar por videoconferência?</span>
+                <br>
+                <input class="radio" checked value="Sim" name="video" type="radio">Sim
+                <input class="radio" value="Não" name="video" type="radio">Não
+            </div>
+        </form>
+
+        <button onclick="gerarSla()">Gerar SLA</button>
+    </main>
+    <section class="steps">
+        <h1 class="title">Checklist</h1>
+        <form class="form--checklist">
+            <div class="step__container container">
+                <input class="check" name="step-mql" type="checkbox">
+                <span>Validar MQL</span>
+            </div>
+            <br>
+            <div class="step__container container">
+                <input class="check" name="step-fixar-nota" type="checkbox">
+                <span>Fixar nota de qualificação no HubSpot</span>
+            </div>
+            <div class="step__container container">
+                <input class="check" name="step-link-agenda" type="checkbox">
+                <span>Colar link do deal na planilha</span>
+            </div>
+            <div class="step__container container">
+                <input class="check" name="step-link-slack" type="checkbox">
+                <span>Enviar link do deal no Slack</span>
+            </div>
+            <div class="step__container container">
+                <input class="check" name="step-mover-etapa" type="checkbox">
+                <span>Mover Lead para "Entrevista Agendada"</span>
+            </div>
+            <div class="step__container container">
+                <input class="check" name="step-mudar-proprietario" type="checkbox">
+                <span>Mudar proprietário do Lead</span>
+            </div>
+            <div class="step__container container">
+                <input class="check" name="step-email" type="checkbox">
+                <span>Enviar email com link da reunião</span>
+            </div>
+            <div class="step__container container">
+                <input class="check" name="step-whatsapp" type="checkbox">
+                <span>Enviar WhatsApp com link da reunião</span>
+            </div>
+            <div class="step__container container">
+                <input class="check" name="step-registrar-whatsapp" type="checkbox">
+                <span>Registrar WhatsApp no HubSpot</span>
+            </div>
+        </form>
+        <button onclick="resetForm()">Finalizar</button>
+    </section>
+</body>
+</html>
