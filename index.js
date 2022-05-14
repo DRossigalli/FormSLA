@@ -2,8 +2,12 @@ let form = document.querySelector('.form--sla');
 let check = document.querySelector('.form--checklist');
 var teste = 5
 
-function enableForm() {
-    form.programa.disabled = false
+function changeForm() {
+    if (form.programa.disabled == true) {
+        form.programa.disabled = false
+    } else {
+        form.programa.disabled = true
+    }
 }
 
 function gerarSla() {

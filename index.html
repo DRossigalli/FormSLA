@@ -9,6 +9,71 @@
     <title>SLA</title>
 </head>
 <body>
+    <header>
+        <img src="src/g4_logo.svg" alt="">
+    </header>
+    <section class="pitch">
+        <h1 class="title">Pitch</h1>
+        <p>
+            Fala XXX, tudo joia? Aqui é o Diego do G4 Educação
+            To entrando em contato por conta do formulário que você preencheu. Preciso só pegar umas informações sobre o momento que
+            você está, vamos lá?
+        </p>
+        <br>
+        <p>
+            Seguinte então, vou te fazer umas perguntinhas só pra entender se faz sentido pra nós ter você na imersão. Se eu
+            entender que você se encaixa com a gente, então vou te passar pra 3º etapa que é uma call com meu especialista, que vai
+            te explicar tudo sobre a imersão, ok?
+            <br>
+            <br>
+            XXX, posso deixar combinado contigo que: eu entendendo seu desafio, e você fazendo sentido pra imersão, eu posso contar
+            com você na próxima etapa?
+        </p>
+        <br>
+        <p>
+            Você é XXX aí na XXX certo?
+            A XXX fatura aproximadamente quanto por ano?
+            Do que você cuida por aí?
+        </p>
+        <br>
+        <p>
+            Que demais! Sendo XXX eu imagino que você seja bem antenado não é? Você já conhecia o G4? Como chegou aqui na gente?
+        </p>
+        <br>
+        <p>
+            Então já foi/vai virar um aluno nosso?
+        </p>
+        <br>
+        <p>
+            O que a XXX vende hoje?
+        </p>
+        <br>
+        <p>
+            Que bacana! Temos muitos alunos nesse segmento aqui com a gente... E agora me conta, como vocês fazem essa venda? Quais
+            são os canais pra chegar até seu cliente?
+        </p>
+        <br>
+        <p>
+            Entendi... É usando XXX e XXX então, show. Vocês usam essa estratégia pra chegar até que tipo de cliente? Pra quem vocês
+            vendem?
+        </p>
+        <br>
+        <p>
+            Perfeito, entendi! E qual o maior desafio da XXX hoje?
+        </p>
+        <br>
+        <p>
+            Maravilha. Peguei suas informações aqui, me dá só um segundinho que eu vou checar aquela parte de alinhamento que eu
+            comentei com você...
+            
+            Olha só XXX, vou terminar essa ligação te dando uma bela notícia. Tem muito alinhamento entre o momento que você tá e as
+            imersões aqui do G4. Vai ser um divisor de águas, tanto na empresa pela enxurrada de conhecimento, quanto no seu dia a
+            dia, pelo networking (que vamos combinar... não tem preço). Vou fazer o seguinte então:
+            Vou avisar nosso time que você passou pela pré-seleção, e vou te colocar em contato com meu especialista. Ele vai te
+            explicar tudo, tirar suas dúvidas e te mostrar a experiência surreal que você vai ter se decidir tomar esse próximo
+            passo
+        </p>
+    </section>
     <main class="sla">
         <h1 class="title">Preenchimento da SLA</h1>
         <form class="form--sla">
@@ -27,8 +92,8 @@
             <div class="sla__container container">
                 <span>Já foi aluno de algum programa?</span>
                 <br>
-                <input onclick="enableForm()" class="radio" value="Sim" name="alumni" type="radio">Sim
-                <input class="radio" checked value="Não" name="alumni" type="radio">Não
+                <input onclick="changeForm()" class="radio" value="Sim" name="alumni" type="radio">Sim
+                <input onclick="changeForm()" class="radio" checked value="Não" name="alumni" type="radio">Não
                 <textarea name="programa" disabled id="" rows="1"></textarea>
             </div>
             <div class="sla__container container">
@@ -68,18 +133,9 @@
                 <input class="check" name="step-mql" type="checkbox">
                 <span>Validar MQL</span>
             </div>
-            <br>
             <div class="step__container container">
                 <input class="check" name="step-fixar-nota" type="checkbox">
                 <span>Fixar nota de qualificação no HubSpot</span>
-            </div>
-            <div class="step__container container">
-                <input class="check" name="step-link-agenda" type="checkbox">
-                <span>Colar link do deal na planilha</span>
-            </div>
-            <div class="step__container container">
-                <input class="check" name="step-link-slack" type="checkbox">
-                <span>Enviar link do deal no Slack</span>
             </div>
             <div class="step__container container">
                 <input class="check" name="step-mover-etapa" type="checkbox">
@@ -90,16 +146,28 @@
                 <span>Mudar proprietário do Lead</span>
             </div>
             <div class="step__container container">
+                <input class="check" name="step-link-agenda" type="checkbox">
+                <span>Colar link do deal na planilha</span>
+            </div>
+            <div class="step__container container">
+                <input class="check" name="step-link-slack" type="checkbox">
+                <span>Enviar link do deal no Slack</span>
+            </div>
+            <div class="step__container container">
                 <input class="check" name="step-email" type="checkbox">
                 <span>Enviar email com link da reunião</span>
             </div>
             <div class="step__container container">
                 <input class="check" name="step-whatsapp" type="checkbox">
-                <span>Enviar WhatsApp com link da reunião</span>
+                <span>Enviar WhatsApp com link da reunião e adicionar etiqueta</span>
             </div>
             <div class="step__container container">
                 <input class="check" name="step-registrar-whatsapp" type="checkbox">
                 <span>Registrar WhatsApp no HubSpot</span>
+            </div>
+            <div class="step__container container">
+                <input class="check" name="step-registrar-whatsapp" type="checkbox">
+                <span>Adicionar lead no Microsoft ToDo</span>
             </div>
         </form>
         <button onclick="resetForm()">Finalizar</button>
